@@ -8,6 +8,8 @@ from openpyxl.styles import Font
 from openpyxl.styles import Alignment
 from openpyxl.styles import Border, Side
 import os
+import time
+import datetime
 
 
 '''
@@ -119,7 +121,26 @@ for rows in worksheet.iter_rows(min_row=9, max_row=13, min_col=1, max_col=6):
 
 
 myworkbook.save(path)
-print(user_info_dic)
+# print(user_info_dic)
 
+# 本地时间戳
+t = time.time()
+print(t)
 
+t1 = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(t))
+print(t1)
 
+# 时间格式转换 - 使用datetime
+middle = datetime.datetime.strptime('2022/02/28','%Y/%m/%d')
+print(middle) #输出：2022-02-28 00:00:00
+end_date = datetime.datetime.strftime(middle, "%Y-%m-%d")
+print(end_date) #输出：2022-02-28
+
+# 时间格式转换 - 使用time
+middle = time.strptime('2022/2/28','%Y/%m/%d')
+print(middle) #输出：time.struct_time(tm_year=2022, tm_mon=2, tm_mday=28, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=0, tm_yday=59, tm_isdst=-1)
+end_date = time.strftime("%Y-%m-%d",middle)
+print(end_date) #输出：2022-02-28
+# 时间戳
+t2 = time.mktime(middle)
+print(t2)

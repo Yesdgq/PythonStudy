@@ -23,3 +23,11 @@ for file in files:
 # 判断是否是绝对路径
 result = os.path.isabs(path)
 print(result)
+
+
+# 获取上一级目录
+Path=os.path.dirname(os.getcwd())
+print(Path)
+# 获取上一级目录
+Path=os.path.abspath(os.path.join(os.getcwd(),".."))
+print(Path)
