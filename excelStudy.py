@@ -131,10 +131,15 @@ t1 = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(t))
 print(t1)
 
 # 时间格式转换 - 使用datetime
-middle = datetime.datetime.strptime('2022/02/28','%Y/%m/%d')
-print(middle) #输出：2022-02-28 00:00:00
-end_date = datetime.datetime.strftime(middle, "%Y-%m-%d")
-print(end_date) #输出：2022-02-28
+try:
+ middle = datetime.datetime.strptime('2022/02/28','%Y/%m/%d')
+ print(middle) #输出：2022-02-28 00:00:00
+ end_date = datetime.datetime.strftime(middle, "%Y-%m-%d")
+ print(end_date) #输出：2022-02-28
+except ValueError:
+    print('日期格式不正确')
+
+
 
 # 时间格式转换 - 使用time
 middle = time.strptime('2022/2/28','%Y/%m/%d')
