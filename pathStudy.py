@@ -2,19 +2,32 @@
 
 import os
 
+
+
 # 绝对路径
 path = os.getcwd()
+
+
 print("path:" + path)
+
+
+fileName = ''
 
 # 遍历当前路径下文件
 files=os.listdir(path)
 for file in files:
  print("file: "+file)
+ if '.xlsx' in file or '.xls' in file:
+    fileName = file
+    print("file222: "+fileName)
+    break
+
+os._exit(0)
 
 # 将相对路径转换为绝对路径
-# path = "Excel"
-# os.path.abspath(path)
-# print(path)
+path = "Excel"
+os.path.abspath(path)
+print(path)
 
 # 将返回从 start 路径到 path 的相对路径的字符串。如果没有提供 start，就使用当前工作目录作为开始路径
 # os.path.relpath(path)
