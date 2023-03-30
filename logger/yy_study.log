@@ -1,0 +1,10 @@
+2023-02-20 11:58:30,656 - 6732-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:7] - INFO: info
+2023-02-20 11:58:30,656 - 6732-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:8] - WARNING: warning
+2023-02-20 11:58:30,656 - 6732-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:9] - DEBUG: debug
+2023-02-20 11:58:30,656 - 6732-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:10] - ERROR: error
+2023-02-20 11:58:30,656 - 6732-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:11] - CRITICAL: FATAL
+2023-02-20 11:58:36,528 - 6766-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:7] - INFO: info
+2023-02-20 11:58:36,528 - 6766-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:8] - WARNING: warning
+2023-02-20 11:58:36,528 - 6766-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:9] - DEBUG: debug
+2023-02-20 11:58:36,528 - 6766-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:10] - ERROR: error
+2023-02-20 11:58:36,528 - 6766-MainThread - /Users/yesdgq/Desktop/workspace/PythonStudy/logger/Untitled-1.py[line:11] - CRITICAL: FATAL
