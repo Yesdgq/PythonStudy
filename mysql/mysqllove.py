@@ -35,27 +35,27 @@ mycursor = mydb.cursor()
 
 
 
-# mycursor.execute("CREATE TABLE students (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), sex VARCHAR(255), age VARCHAR(255), phone VARCHAR(255), address VARCHAR(255), url VARCHAR(255))")
+# mycursor.execute("CREATE TABLE user (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), sex INT, age BIGINT, phone VARCHAR(256), version BIGINT, deleted INT, updateTime VARCHAR(255), createTime VARCHAR(255))")
 
 # 添加column
-# mycursor.execute("ALTER TABLE students ADD COLUMN age VARCHAR(255)")
+# mycursor.execute("ALTER TABLE user ADD COLUMN remark VARCHAR(255)")
 
 # table插入数据
-sql = "INSERT INTO students (name, sex, age, phone) VALUES (%s, %s, %s, %s)"
-val = [
-  ('张三', '男', '19', '13901234123'),
-  ('李四', '男', '29', '13901234123'),
-  ('王武', '男', '39', '13561234123'),
-  ('赵麻子', '男', '9', '1870123410'),
-  ('张三', '男', '19', '13901234123'),
-  ('李四', '男', '29', '13901234123'),
-  ('王武', '男', '39', '13561234123'),
-  ('小沙', '女', '9', '1870123410'),
-  ('大鑫子', '男', '19', '13901234123'),
-  ('阿彪', '男', '29', '13901234123'),
-  ('佳雯', '女', '39', '13561234123'),
-  ('赵麻子', '男', '9', '1870123410'),
-]
+# sql = "INSERT INTO user (name, sex, age, phone) VALUES (%s, %s, %s, %s)"
+# val = [
+#   ('张三', 1, 19, '13901234123'),
+#   ('李四', 1, 29, '13901234123'),
+#   ('王武', 1, 39, '13561234123'),
+#   ('赵麻子', 1, 9, '1870123410'),
+#   ('张三', 0, 19, '13901234123'),
+#   ('李四', 1, 29, '13901234123'),
+#   ('王武', 1, 39, '13561234123'),
+#   ('小沙', 0, 9, '1870123410'),
+#   ('大鑫子', 1, 19, '13901234123'),
+#   ('阿彪', 1, 29, '13901234123'),
+#   ('佳雯', 0, 39, '13561234123'),
+#   ('赵麻子', 1, 9, '1870123410'),
+# ]
 
 # mycursor.executemany(sql, val)
 # mydb.commit()  
@@ -77,10 +77,10 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM students WHERE name = '李四'")
+mycursor.execute("SELECT * FROM user WHERE name = '李四'")
  
 myresult = mycursor.fetchall()     # fetchall() 获取所有记录
  
 
-# for x in myresult:
-#   print(x)
+for x in myresult:
+  print(x)
